@@ -1,0 +1,21 @@
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  username: testname
+  password: testpw
+  database: gpstest_dev
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  username: testname
+  password: testpw
+  database: gpstest_test
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  username: testname
+  password: testpw
+  database: gpstest

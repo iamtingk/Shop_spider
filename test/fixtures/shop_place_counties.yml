@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place_id: MyString
+  place_county: MyString
+  place_zip_code: MyString
+
+two:
+  place_id: MyString
+  place_county: MyString
+  place_zip_code: MyString

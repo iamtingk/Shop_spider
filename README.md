@@ -27,8 +27,8 @@ $google_key = "google_api_key"
 </br>
 記得啟動mysql</br>
 編輯config/database.yml</br>
-改成自己的資料庫</br>
-終端機：
+改成自己的資料庫之後</br>
+在終端機：
 ```
 $ rake db:create
 

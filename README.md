@@ -93,17 +93,33 @@ $ rails server
 * 超過google連接額度，會自動結束程式
 
 
-萬一遇到需停止程式的因素但還未採集完畢，這時候程式會記錄當前座標，以利下次執行程式時，繼續以已記錄的座標為起始點來運行
-註：當前座標會記錄在gpsrun.txt
-如下圖：
+>>萬一遇到需停止程式的因素但還未採集完畢
+>
+>>這時候程式會記錄當前座標
+>
+>>以利下次執行程式時
+>
+>>繼續以已記錄的座標為起始點來運行
+>
+>>>註：當前座標會記錄在gpsrun.txt
+>
+>>如下圖：
+
+
 ![gpsrun.txt](https://github.com/iamtingk/Shop_spider/blob/master/pic/14233.png)
 
 
-google api取得的place_id是商店的唯一值
-程式以此place_id判斷該筆資訊是否重複
-以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多
-註：未重複的place_id會記錄在check_place.txt
-如下圖：
+>>google api取得的place_id是商店的唯一值
+>
+>>程式以此place_id判斷該筆資訊是否重複
+>
+>>以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多
+>
+>>>註：未重複的place_id會記錄在check_place.txt
+>
+>>如下圖：
+
+
 ![check_place](https://github.com/iamtingk/Shop_spider/blob/master/pic/14234.png)
 
 

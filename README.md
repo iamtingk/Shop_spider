@@ -2,7 +2,7 @@
 #Ruby on Rails - 商店爬蟲
 
 
-這是利用Google Places API作為區域性的商店爬蟲
+這是利用Google Places API作為區域性的商店爬蟲</br>
 只要是google api釋出的商家，都可以採集
 
 
@@ -16,16 +16,17 @@ $ bundle install
 ```
 
 
-Google API Console(https://console.developers.google.com)Google 開啟Places API Web Service
-申請一組憑證後
+[Google API Console](https://console.developers.google.com)</br>
+啟動API -> Places API Web Service</br>
+申請一組憑證後</br>
 gps_run_controller.rb：
 ```
 $google_key = "google_api_key"
 ```
 
-記得啟動mysql
-編輯config/database.yml
-改成自己的資料庫
+記得啟動mysql</br>
+編輯config/database.yml</br>
+改成自己的資料庫</br>
 終端機：
 ```
 $ rake db:create
@@ -34,14 +35,14 @@ $ rake db:migrate
 ```
 
 
-google API有限制連接次數 15萬次/天 
-故程式初始數值可設置連接次數
+google API有限制連接次數 15萬次/天 </br>
+故程式初始數值可設置連接次數</br>
 gps_run_controller.rb：
 ```
 * connect_total = 10000#最大連接數
 ```
 
-可初始圓的搜尋範圍
+可初始圓的搜尋範圍</br>
 gps_run_controller.rb：
 ```
 radius=150#大圓
@@ -49,7 +50,7 @@ radius=150#大圓
 
 
 
-可初始最初座標、終點座標
+可初始最初座標、終點座標</br>
 gps_run_controller.rb：
 ```
 /#台中座標
@@ -69,7 +70,7 @@ $ rails server
 ```
 
 
-開啟瀏覽器，輸入：localhost:3000/run
+開啟瀏覽器，輸入：localhost:3000/run</br>
 直接運行，運行的狀態會在終端機顯示
 
 
@@ -105,7 +106,8 @@ $ rails server
 </br>
 </br>
 </br>
->google api取得的place_id是商店的唯一值，程式以此place_id判斷該筆資訊是否重複，以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多
+>google api取得的place_id是商店的唯一值，程式以此place_id判斷該筆資訊是否重複</br>
+以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多
 >註：未重複的place_id會記錄在check_place.txt
 
 
@@ -119,7 +121,7 @@ $ rails server
 
 
 ##採集資訊
-判斷該資訊的郵遞區號，來正確區分縣市
+判斷該資訊的郵遞區號，來正確區分縣市</br>
 儲存的資訊有：
 ```
 商家名稱
@@ -183,7 +185,7 @@ Shop_type
 
 ###development環境，可正常運行
 ###我習慣運用nginx+unicorn實行production環境
-
+</br>
 
 以終端機觀看爬蟲訊息，運行狀況
 

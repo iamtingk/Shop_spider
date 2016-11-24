@@ -101,8 +101,11 @@ $ rails server
 
 
 ![gpsrun.txt](https://github.com/iamtingk/Shop_spider/blob/master/pic/14233.png)
-
-
+</br>
+</br>
+***
+</br>
+</br>
 >google api取得的place_id是商店的唯一值，程式以此place_id判斷該筆資訊是否重複，以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多
 >註：未重複的place_id會記錄在check_place.txt
 

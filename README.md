@@ -194,7 +194,9 @@ Shop_type
 
 
 ![運行1](https://github.com/iamtingk/Shop_spider/blob/master/pic/14231.png)
-
+</br>
+</br>
 ***
-
+</br>
+</br>
 ![運行2](https://github.com/iamtingk/Shop_spider/blob/master/pic/14232.png)

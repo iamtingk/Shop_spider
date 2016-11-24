@@ -6,7 +6,7 @@
 只要是google api釋出的商家，都可以採集
 
 
-##Setup：
+##Setup
 ```
 $ https://github.com/iamtingk/Shop_spider.git
 
@@ -77,7 +77,7 @@ $ rails server
 直接運行，運行的狀態會在終端機顯示
 
 
-##特色：
+##特色
 我的方式
 ```
 最左上為起始，最右下為終點

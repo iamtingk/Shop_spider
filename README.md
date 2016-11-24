@@ -197,3 +197,14 @@ Shop_type
 </br>
 </br>
 ![運行2](https://github.com/iamtingk/Shop_spider/blob/master/pic/14232.png)
+</br>
+</br>
+</br>
+
+##聯絡我
+如果需改進的地方或是交流，很歡迎來信：
+```
+gntim0o01@gmail.com
+```
+</br>
+</br>

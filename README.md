@@ -2,7 +2,10 @@
 #Ruby on Rails - 商店爬蟲
 
 
-這是利用Google Places API作為區域性的商店爬蟲</br>
+這是利用Google Places API作為區域性的商店爬蟲
+
+
+
 只要是google api釋出的商家，都可以採集
 
 
@@ -16,42 +19,51 @@ $ bundle install
 ```
 
 </br>
-[Google API Console](https://console.developers.google.com)</br>
-啟動API -> Places API Web Service</br>
-申請一組憑證後</br>
+[Google API Console](https://console.developers.google.com)
+</br>
+啟動API -> Places API Web Service
+</br>
+申請一組憑證後
+</br>
 gps_run_controller.rb：
 ```
 $google_key = "google_api_key"
 ```
+</br></br>
+
+記得啟動mysql
 </br>
+編輯config/database.yml
 </br>
-記得啟動mysql</br>
-編輯config/database.yml</br>
-改成自己的資料庫之後</br>
+改成自己的資料庫之後
+</br>
 在終端機：
 ```
 $ rake db:create
 
 $ rake db:migrate
 ```
+</br></br>
+google API有限制連接次數 15萬次/天 
 </br>
+故程式初始數值可設置連接次數
 </br>
-google API有限制連接次數 15萬次/天 </br>
-故程式初始數值可設置連接次數</br>
 gps_run_controller.rb：
 ```
 * connect_total = 10000#最大連接數
 ```
 </br>
 </br>
-可初始圓的搜尋範圍</br>
+可初始圓的搜尋範圍
+</br>
 gps_run_controller.rb：
 ```
 radius=150#大圓
 ```
 </br>
 </br>
-可初始最初座標、終點座標</br>
+可初始最初座標、終點座標
+</br>
 gps_run_controller.rb：
 ```
 /#台中座標
@@ -64,16 +76,15 @@ max_y = 24.009268 #終點y
 #最右下為終點
 #此範圍可以設置台中市、台南市、整個台灣
 ```
-</br>
-</br>
+</br></br>
 啟動
 ```
 $ rails server
 ```
 
+</br></br>
+開啟瀏覽器，輸入：localhost:3000/run
 </br>
-</br>
-開啟瀏覽器，輸入：localhost:3000/run</br>
 直接運行，運行的狀態會在終端機顯示
 
 
@@ -97,7 +108,8 @@ $ rails server
 * 超過google連接額度，會自動結束程式
 
 
->萬一遇到需停止程式的因素但還未採集完畢，這時候程式會記錄當前座標，以利下次執行程式時，繼續以已記錄的座標為起始點來運行</br>
+>萬一遇到需停止程式的因素但還未採集完畢，這時候程式會記錄當前座標，以利下次執行程式時，繼續以已記錄的座標為起始點來運行
+</br>
 >註：當前座標會記錄在gpsrun.txt
 
 
@@ -105,12 +117,11 @@ $ rails server
 
 
 ![gpsrun.txt](https://github.com/iamtingk/Shop_spider/blob/master/pic/14233.png)
+</br></br></br></br>
+>google api取得的place_id是商店的唯一值，程式以此place_id判斷該筆資訊是否重複
 </br>
+以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多
 </br>
-</br>
-</br>
->google api取得的place_id是商店的唯一值，程式以此place_id判斷該筆資訊是否重複</br>
-以十萬筆為例，我用file方式比對，與mysql比較起來，file方式的比對速度快很多</br>
 >註：未重複的place_id會記錄在check_place.txt
 
 
@@ -124,7 +135,8 @@ $ rails server
 
 
 ##採集資訊
-判斷該資訊的郵遞區號，來正確區分縣市</br>
+判斷該資訊的郵遞區號，來正確區分縣市
+</br>
 儲存的資訊有：
 ```
 商家名稱

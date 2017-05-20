@@ -60,8 +60,7 @@ gps_run_controller.rb：
 ```
 radius=150#大圓
 ```
-</br>
-</br>
+
 可初始最初座標、終點座標
 </br>
 gps_run_controller.rb：

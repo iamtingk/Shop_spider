@@ -1,5 +1,5 @@
 
-#Ruby on Rails - 商店爬蟲
+# Ruby on Rails - 商店爬蟲
 
 
 這是利用Google Places API作為區域性的商店爬蟲
@@ -9,7 +9,7 @@
 只要是google api釋出的商家，都可以採集
 
 
-##Setup
+## Setup
 ```
 $ https://github.com/iamtingk/Shop_spider.git
 
@@ -55,14 +55,14 @@ gps_run_controller.rb：
 </br>
 </br>
 可初始圓的搜尋範圍
-</br>
+
 gps_run_controller.rb：
 ```
 radius=150#大圓
 ```
 
 可初始最初座標、終點座標
-</br>
+
 gps_run_controller.rb：
 ```
 /#台中座標
@@ -81,13 +81,13 @@ max_y = 24.009268 #終點y
 $ rails server
 ```
 
-</br></br>
+
 開啟瀏覽器，輸入：localhost:3000/run
-</br>
+
 直接運行，運行的狀態會在終端機顯示
 
 
-##特色
+## 特色
 我的方式
 ```
 最左上為起始，最右下為終點
@@ -133,7 +133,7 @@ $ rails server
 
 
 
-##採集資訊
+## 採集資訊
 判斷該資訊的郵遞區號，來正確區分縣市
 </br>
 儲存的資訊有：
@@ -152,7 +152,7 @@ place_id
 
 
 
-##自動產出檔案
+## 自動產出檔案
 初始化座標，記得直接刪除check_place.txt、gpsrun.txt、select_gps.txt這三個檔案，程式會自動再次產出
 ```
 check_place.txt ： 比對place_id是否重複
@@ -160,7 +160,7 @@ gpsrun.txt      ： 記錄當前爬蟲座標
 select_gps.txt  ： 記錄運行次數
 ```
 
-##資料庫結構
+## 資料庫結構
 ```
 Shop
 |____shop_name
@@ -197,8 +197,8 @@ Shop_type
 ```
 
 
-###development環境，可正常運行
-###我習慣運用nginx+unicorn實行production環境
+### development環境，可正常運行
+### 我習慣運用nginx+unicorn實行production環境
 </br>
 
 以終端機觀看爬蟲訊息，運行狀況
@@ -217,7 +217,7 @@ Shop_type
 </br>
 </br>
 
-##聯絡我
+## 聯絡我
 如果需改進的地方或是互相交流一下，很歡迎來信哦～
 ```
 gntim0o01@gmail.com
